@@ -1,4 +1,5 @@
 ## CORDIC
+![image](https://github.com/shreyasingh2302vl10/CORDIC-Based-16-Stage-Pipelined-Processor/blob/460f8666d29f41fb9663c70ae5123b6706758bd4/Screenshot%202026-02-04%20154413.png)
 
 This project presents the design and implementation of a 16-stage pipelined CORDIC processor using Verilog HDL for efficient trigonometric computation. The processor is based on the rotation-mode CORDIC algorithm, which computes sine and cosine values using only shift-and-add operations, making it suitable for hardware-efficient digital signal processing applications.
 
