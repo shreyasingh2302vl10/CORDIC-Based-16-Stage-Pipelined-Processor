@@ -67,12 +67,5 @@ In the final stage, a **MUX-based correction** is applied using control signal `
 
 ---
 
-## Key Features
-
-* 16-bit signed fixed-point design
-* 16-stage pipelined CORDIC processor
-* Shift-add based arithmetic (hardware efficient)
-* Fully synchronous design using clock and reset
-* Suitable for FPGA and DSP applications
 
 
