@@ -1,0 +1,381 @@
+`timescale 1ns / 1ps
+
+module main(Xin,Xout,Yin,Yout,Zin,Zout,clk,reset);
+input signed  [15:0]Xin,Yin,Zin;
+output signed [15:0]Xout,Yout,Zout;
+input reset,clk;
+//wire signed [15:0] Zin;
+//assign  Zin=Zint;
+//(Zint[15:14]==2'b00|| Zint[15:14]==2'b11)?Zint:
+//(Zint[15:14]==2'b01)?
+//{2'b11,Zint[13:0]}:{2'b00,Zint[13:0]};
+wire signed p0;
+wire signed p1;
+wire signed p2;
+wire signed p3;
+wire signed p4;
+wire signed p5;
+wire signed p6;
+wire signed p7;
+wire signed p8;
+wire signed p9;
+wire signed p10;
+wire signed p11;
+wire signed p12;
+wire signed p13;
+wire signed p14;
+wire signed p15;
+wire signed p16;
+wire signed p17;
+
+
+wire signed [15:0]Zint;
+wire signed [15:0]X1;
+wire signed [15:0]Y1;
+wire signed [15:0]Z1;
+
+wire signed [15:0]RX1;
+wire signed [15:0]RY1;
+wire signed [15:0]RZ1;
+
+wire signed [15:0]X2;
+wire signed [15:0]Y2;
+wire signed [15:0]Z2;
+
+wire signed [15:0]RX2;
+wire signed [15:0]RY2;
+wire signed [15:0]RZ2;
+
+wire signed [15:0]X3;
+wire signed [15:0]Y3;
+wire signed [15:0]Z3;
+
+wire signed [15:0]RX3;
+wire signed [15:0]RY3;
+wire signed [15:0]RZ3;
+
+wire signed [15:0]X4;
+wire signed [15:0]Y4;
+wire signed [15:0]Z4;
+
+wire signed [15:0]RX4;
+wire signed [15:0]RY4;
+wire signed [15:0]RZ4;
+
+wire signed [15:0]X5;
+wire signed [15:0]Y5;
+wire signed [15:0]Z5;
+
+wire signed [15:0]RX5;
+wire signed [15:0]RY5;
+wire signed [15:0]RZ5;
+
+wire signed [15:0]X6;
+wire signed [15:0]Y6;
+wire signed [15:0]Z6;
+
+wire signed [15:0]RX6;
+wire signed [15:0]RY6;
+wire signed [15:0]RZ6;
+
+wire signed [15:0]X7;
+wire signed [15:0]Y7;
+wire signed [15:0]Z7;
+
+wire signed [15:0]RX7;
+wire signed [15:0]RY7;
+wire signed [15:0]RZ7;
+
+wire signed [15:0]X8;
+wire signed [15:0]Y8;
+wire signed [15:0]Z8;
+
+wire signed [15:0]RX8;
+wire signed [15:0]RY8;
+wire signed [15:0]RZ8;
+
+wire signed [15:0]X9;
+wire signed [15:0]Y9;
+wire signed [15:0]Z9;
+
+wire signed [15:0]RX9;
+wire signed [15:0]RY9;
+wire signed [15:0]RZ9;
+
+wire signed [15:0]X10;
+wire signed [15:0]Y10;
+wire signed [15:0]Z10;
+
+wire signed [15:0]RX10;
+wire signed [15:0]RY10;
+wire signed [15:0]RZ10;
+
+wire signed [15:0]X11;
+wire signed [15:0]Y11;
+wire signed [15:0]Z11;
+
+wire signed [15:0]RX11;
+wire signed [15:0]RY11;
+wire signed [15:0]RZ11;
+
+wire signed [15:0]X12;
+wire signed [15:0]Y12;
+wire signed [15:0]Z12;
+
+wire signed [15:0]RX12;
+wire signed [15:0]RY12;
+wire signed [15:0]RZ12;
+
+wire signed [15:0]X13;
+wire signed [15:0]Y13;
+wire signed [15:0]Z13;
+
+wire signed [15:0]RX13;
+wire signed [15:0]RY13;
+wire signed [15:0]RZ13;
+
+wire signed [15:0]X14;
+wire signed [15:0]Y14;
+wire signed [15:0]Z14;
+
+wire signed [15:0]RX14;
+wire signed [15:0]RY14;
+wire signed [15:0]RZ14;
+
+wire signed [15:0]X15;
+wire signed [15:0]Y15;
+wire signed [15:0]Z15;
+
+wire signed [15:0]RX15;
+wire signed [15:0]RY15;
+wire signed [15:0]RZ15;
+
+wire signed [15:0]X16;
+wire signed [15:0]Y16;
+wire signed [15:0]Z16;
+
+wire signed [15:0]RX16;
+wire signed [15:0]RY16;
+wire signed [15:0]RZ16;
+
+wire signed [15:0]RX17;
+wire signed [15:0]RY17;
+wire signed [15:0]RZ17;
+
+//wire signed [15:0] atan_table [0:15];
+//assign atan_table[0]  = 16'b0010000000000000; // 8192  = atan(1)
+//assign atan_table[1]  = 16'b0001001011100100; // 4836  = atan(1/2)
+//assign atan_table[2]  = 16'b0000100111111011; // 2555  = atan(1/4)
+//assign atan_table[3]  = 16'b0000010100010001; // 1297  = atan(1/8)
+//assign atan_table[4]  = 16'b0000001010001011; // 651   = atan(1/16)
+//assign atan_table[5]  = 16'b0000000101000101; // 326   = atan(1/32)
+//assign atan_table[6]  = 16'b0000000010100010; // 163   = atan(1/64)
+//assign atan_table[7]  = 16'b0000000001010001; // 81    = atan(1/128)
+//assign atan_table[8]  = 16'b0000000000101000; // 41
+//assign atan_table[9]  = 16'b0000000000010100; // 20
+//assign atan_table[10] = 16'b0000000000001010; // 10
+//assign atan_table[11] = 16'b0000000000000101; // 5
+//assign atan_table[12] = 16'b0000000000000010; // 2
+//assign atan_table[13] = 16'b0000000000000001; // 1
+//assign atan_table[14] = 16'b0000000000000001; // 1
+//assign atan_table[15] = 16'b0000000000000000; // 0
+
+xor(p0,Zin[15],Zin[14]);
+angletransform ang(Zin,Zint,p0);
+
+
+//------------------------------STAGE 1-----------------------------------
+register rx1(Xin,RX1,clk,reset);
+register ry1(Yin,RY1,clk,reset); 
+register rz1(Zint,RZ1,clk,reset); 
+dff d1(p0,p1,clk,reset);
+
+compute cx1(.A(RX1),.B(RY1>>>0),.control(~RZ1[15]),.OUT(X1));
+compute cy1(.A(RY1),.B(RX1>>>0),.control(RZ1[15]),.OUT(Y1));
+compute cz1(.A(RZ1),.B(16'h2000),.control(~RZ1[15]),.OUT(Z1));
+
+//------------------------------STAGE 2-----------------------------------
+
+register rx2(X1,RX2,clk,reset);
+register ry2(Y1,RY2,clk,reset); 
+register rz2(Z1,RZ2,clk,reset); 
+dff d2(p1,p2,clk,reset);
+
+compute cx2(.A(RX2),.B(RY2>>>1),.control(~RZ2[15]),.OUT(X2));
+compute cy2(.A(RY2),.B(RX2>>>1),.control(RZ2[15]),.OUT(Y2));
+compute cz2(.A(RZ2),.B(16'h12E4),.control(~RZ2[15]),.OUT(Z2));
+
+//------------------------------STAGE 3-----------------------------------
+
+
+register rx3(X2,RX3,clk,reset);
+register ry3(Y2,RY3,clk,reset); 
+register rz3(Z2,RZ3,clk,reset); 
+dff d3(p2,p3,clk,reset);
+
+compute cx3(.A(RX3),.B(RY3>>>2),.control(~RZ3[15]),.OUT(X3));
+compute cy3(.A(RY3),.B(RX3>>>2),.control(RZ3[15]),.OUT(Y3));
+compute cz3(.A(RZ3),.B(16'h09FB),.control(~RZ3[15]),.OUT(Z3));
+
+//------------------------------STAGE 4-----------------------------------
+
+register rx4(X3,RX4,clk,reset);
+register ry4(Y3,RY4,clk,reset); 
+register rz4(Z3,RZ4,clk,reset); 
+dff d4(p3,p4,clk,reset);
+
+compute cx4(.A(RX4),.B(RY4>>>3),.control(~RZ4[15]),.OUT(X4));
+compute cy4(.A(RY4),.B(RX4>>>3),.control(RZ4[15]),.OUT(Y4));
+compute cz4(.A(RZ4),.B(16'h0511),.control(~RZ4[15]),.OUT(Z4));
+
+//------------------------------STAGE 5-----------------------------------
+
+register rx5(X4, RX5, clk, reset);
+register ry5(Y4, RY5, clk, reset);
+register rz5(Z4, RZ5, clk, reset);
+dff d5(p4,p5,clk,reset);
+
+compute cx5(.A(RX5), .B(RY5>>>4), .control(~RZ5[15]), .OUT(X5));
+compute cy5(.A(RY5), .B(RX5>>>4), .control( RZ5[15]), .OUT(Y5));
+compute cz5(.A(RZ5), .B(16'h028B), .control(~RZ5[15]), .OUT(Z5));
+
+//------------------------------STAGE 6-----------------------------------
+
+
+register rx6(X5, RX6, clk, reset);
+register ry6(Y5, RY6, clk, reset);
+register rz6(Z5, RZ6, clk, reset);
+dff d6(p5,p6,clk,reset);
+
+compute cx6(.A(RX6), .B(RY6>>>5), .control(~RZ6[15]), .OUT(X6));
+compute cy6(.A(RY6), .B(RX6>>>5), .control( RZ6[15]), .OUT(Y6));
+compute cz6(.A(RZ6), .B(16'h0145), .control(~RZ6[15]), .OUT(Z6));
+
+//------------------------------STAGE 7-----------------------------------
+
+register rx7(X6, RX7, clk, reset);
+register ry7(Y6, RY7, clk, reset);
+register rz7(Z6, RZ7, clk, reset);
+dff d7(p6,p7,clk,reset);
+
+compute cx7(.A(RX7), .B(RY7>>>6), .control(~RZ7[15]), .OUT(X7));
+compute cy7(.A(RY7), .B(RX7>>>6), .control( RZ7[15]), .OUT(Y7));
+compute cz7(.A(RZ7), .B(16'h00A2), .control(~RZ7[15]), .OUT(Z7));
+
+//------------------------------STAGE 8-----------------------------------
+
+register rx8(X7, RX8, clk, reset);
+register ry8(Y7, RY8, clk, reset);
+register rz8(Z7, RZ8, clk, reset);
+dff d8(p7,p8,clk,reset);
+
+compute cx8(.A(RX8), .B(RY8>>>7), .control(~RZ8[15]), .OUT(X8));
+compute cy8(.A(RY8), .B(RX8>>>7), .control( RZ8[15]), .OUT(Y8));
+compute cz8(.A(RZ8), .B(16'h0051), .control(~RZ8[15]), .OUT(Z8));
+
+//------------------------------STAGE 9-----------------------------------
+
+register rx9(X8, RX9, clk, reset);
+register ry9(Y8, RY9, clk, reset);
+register rz9(Z8, RZ9, clk, reset);
+dff d9(p8,p9,clk,reset);
+
+compute cx9(.A(RX9), .B(RY9>>>8), .control(~RZ9[15]), .OUT(X9));
+compute cy9(.A(RY9), .B(RX9>>>8), .control( RZ9[15]), .OUT(Y9));
+compute cz9(.A(RZ9), .B(16'h0028), .control(~RZ9[15]), .OUT(Z9));
+
+//------------------------------STAGE 10-----------------------------------
+
+register rx10(X9, RX10, clk, reset);
+register ry10(Y9, RY10, clk, reset);
+register rz10(Z9, RZ10, clk, reset);
+dff d10(p9,p10,clk,reset);
+
+compute cx10(.A(RX10), .B(RY10>>>9), .control(~RZ10[15]), .OUT(X10));
+compute cy10(.A(RY10), .B(RX10>>>9), .control( RZ10[15]), .OUT(Y10));
+compute cz10(.A(RZ10), .B(16'h0014), .control(~RZ10[15]), .OUT(Z10));
+
+//------------------------------STAGE 11-----------------------------------
+
+register rx11(X10, RX11, clk, reset);
+register ry11(Y10, RY11, clk, reset);
+register rz11(Z10, RZ11, clk, reset);
+dff d11(p10,p11,clk,reset);
+
+compute cx11(.A(RX11), .B(RY11>>>10), .control(~RZ11[15]), .OUT(X11));
+compute cy11(.A(RY11), .B(RX11>>>10), .control( RZ11[15]), .OUT(Y11));
+compute cz11(.A(RZ11), .B(16'h000A), .control(~RZ11[15]), .OUT(Z11));
+
+//------------------------------STAGE 12-----------------------------------
+
+register rx12(X11, RX12, clk, reset);
+register ry12(Y11, RY12, clk, reset);
+register rz12(Z11, RZ12, clk, reset);
+dff d12(p11,p12,clk,reset);
+
+compute cx12(.A(RX12), .B(RY12>>>11), .control(~RZ12[15]), .OUT(X12));
+compute cy12(.A(RY12), .B(RX12>>>11), .control( RZ12[15]), .OUT(Y12));
+compute cz12(.A(RZ12), .B(16'h0005), .control(~RZ12[15]), .OUT(Z12));
+
+//------------------------------STAGE 13-----------------------------------
+
+register rx13(X12, RX13, clk, reset);
+register ry13(Y12, RY13, clk, reset);
+register rz13(Z12, RZ13, clk, reset);
+dff d13(p12,p13,clk,reset);
+
+compute cx13(.A(RX13), .B(RY13>>>12), .control(~RZ13[15]), .OUT(X13));
+compute cy13(.A(RY13), .B(RX13>>>12), .control( RZ13[15]), .OUT(Y13));
+compute cz13(.A(RZ13), .B(16'h0002), .control(~RZ13[15]), .OUT(Z13));
+
+//------------------------------STAGE 14-----------------------------------
+
+register rx14(X13, RX14, clk, reset);
+register ry14(Y13, RY14, clk, reset);
+register rz14(Z13, RZ14, clk, reset);
+dff d14(p13,p14,clk,reset);
+
+compute cx14(.A(RX14), .B(RY14>>>13), .control(~RZ14[15]), .OUT(X14));
+compute cy14(.A(RY14), .B(RX14>>>13), .control( RZ14[15]), .OUT(Y14));
+compute cz14(.A(RZ14), .B(16'h0001), .control(~RZ14[15]), .OUT(Z14));
+
+//------------------------------STAGE 15-----------------------------------
+
+register rx15(X14, RX15, clk, reset);
+register ry15(Y14, RY15, clk, reset);
+register rz15(Z14, RZ15, clk, reset);
+dff d15(p14,p15,clk,reset);
+
+compute cx15(.A(RX15), .B(RY15>>>14), .control(~RZ15[15]), .OUT(X15));
+compute cy15(.A(RY15), .B(RX15>>>14), .control( RZ15[15]), .OUT(Y15));
+compute cz15(.A(RZ15), .B(16'h0001), .control(~RZ15[15]), .OUT(Z15));
+
+//------------------------------STAGE 16-----------------------------------
+
+register rx16(X15, RX16, clk, reset);
+register ry16(Y15, RY16, clk, reset);
+register rz16(Z15, RZ16, clk, reset);
+dff d16(p15,p16,clk,reset);
+
+compute cx16(.A(RX16), .B(RY16>>>15), .control(~RZ16[15]), .OUT(X16));
+compute cy16(.A(RY16), .B(RX16>>>15), .control( RZ16[15]), .OUT(Y16));
+compute cz16(.A(RZ16), .B(16'h0000), .control(~RZ16[15]), .OUT(Z16));
+
+//------------------------------STAGE 17-----------------------------------
+
+register rx17(X16, RX17, clk, reset);
+register ry17(Y16, RY17, clk, reset);
+register rz17(Z16, RZ17, clk, reset);
+dff d17(p16,p17,clk,reset);
+//assign Zout=Z16;
+
+mux mx(RX17,Xout,p17);
+mux my(RY17,Yout,p17);
+
+//assign Xout=(p16==2'b00||p16==2'b11)?X16:~X16+1;
+//assign Yout=(p16==2'b00 ||p16==2'b11)?Y16:~Y16+1;
+
+//assign Xout=X1;
+//assign Yout=Y1;
+//compute cy1(A,B,control,OUT);
+endmodule
