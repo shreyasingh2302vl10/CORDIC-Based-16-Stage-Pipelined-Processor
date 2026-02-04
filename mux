@@ -1,0 +1,14 @@
+`timescale 1ns / 1ps
+module mux(Xin,Xout,s);
+input wire [15:0]Xin;
+
+output reg  [15:0]Xout;
+input wire s;
+always@(*)
+begin 
+if(s==1'b0) 
+    Xout<=Xin;
+else 
+    Xout<=(~Xin)+1;
+end 
+endmodule
