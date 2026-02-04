@@ -1,0 +1,11 @@
+`timescale 1ns / 1ps
+
+module dff(input d, output reg q, input clk, input reset);
+always @(posedge clk or negedge reset  ) begin
+    if (reset)
+        q <= 1'b0;
+    else
+        q <= d;
+end
+endmodule
+
