@@ -1,0 +1,53 @@
+`timescale 1ns / 1ps
+
+module tb_cordic_360;
+
+    reg clk;
+    reg reset;
+    reg signed [15:0] Xin, Yin, Zin;
+    wire signed [15:0] Xout, Yout, Zout;
+
+    // DUT
+    main dut (
+        .Xin(Xin),
+        .Yin(Yin),
+        .Zin(Zin),
+        .Xout(Xout),
+        .Yout(Yout),
+        .Zout(Zout),
+        .clk(clk),
+        .reset(reset)
+    );
+
+    // 100 MHz clock
+   initial 
+    begin
+    clk=1'b0;
+       forever  clk = #5 ~clk; 
+    end 
+    
+    initial
+     begin
+         reset = 1'b0;
+     #10 reset = 1'b1;
+     #10 reset = 1'b0;
+     end 
+    
+    initial
+     begin
+     Xin=16'h26FF;
+     end 
+ 
+     initial 
+     begin 
+      Yin=16'h0000;
+     end 
+ 
+     initial 
+     begin 
+      //Zin=16'hA000;
+       Zin=16'h0000;
+       forever #10 Zin = Zin+16'h0008;
+// #1000 $finish;
+       end 
+endmodule
