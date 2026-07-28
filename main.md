@@ -1,3 +1,4 @@
+```verilog
 `timescale 1ns / 1ps
 
 module main(Xin,Xout,Yin,Yout,Zin,Zout,clk,reset);
@@ -379,3 +380,4 @@ mux my(RY17,Yout,p17);
 //assign Yout=Y1;
 //compute cy1(A,B,control,OUT);
 endmodule
+```
