@@ -2,136 +2,136 @@
 `timescale 1ns / 1ps
 
 module main(Xin,Xout,Yin,Yout,Zin,Zout,clk,reset);
-input signed  [15:0]Xin,Yin,Zin;
-output signed [15:0]Xout,Yout,Zout;
+input   [15:0]Xin,Yin,Zin;
+output  [15:0]Xout,Yout,Zout;
 input reset,clk;
 //wire signed [15:0] Zin;
 //assign  Zin=Zint;
 //(Zint[15:14]==2'b00|| Zint[15:14]==2'b11)?Zint:
 //(Zint[15:14]==2'b01)?
 //{2'b11,Zint[13:0]}:{2'b00,Zint[13:0]};
-wire signed p0;
-wire signed p1;
-wire signed p2;
-wire signed p3;
-wire signed p4;
-wire signed p5;
-wire signed p6;
-wire signed p7;
-wire signed p8;
-wire signed p9;
-wire signed p10;
-wire signed p11;
-wire signed p12;
-wire signed p13;
-wire signed p14;
-wire signed p15;
-wire signed p16;
-wire signed p17;
+wire  p0;
+wire  p1;
+wire  p2;
+wire  p3;
+wire  p4;
+wire  p5;
+wire  p6;
+wire  p7;
+wire  p8;
+wire  p9;
+wire  p10;
+wire  p11;
+wire  p12;
+wire  p13;
+wire  p14;
+wire  p15;
+wire  p16;
+wire  p17;
 
 
-wire signed [15:0]Zint;
-wire signed [15:0]X1;
-wire signed [15:0]Y1;
-wire signed [15:0]Z1;
+wire  [15:0]Zint;
+wire  [15:0]X1;
+wire  [15:0]Y1;
+wire  [15:0]Z1;
 
-wire signed [15:0]RX1;
-wire signed [15:0]RY1;
-wire signed [15:0]RZ1;
+wire  [15:0]RX1;
+wire  [15:0]RY1;
+wire  [15:0]RZ1;
 
-wire signed [15:0]X2;
-wire signed [15:0]Y2;
-wire signed [15:0]Z2;
+wire  [15:0]X2;
+wire  [15:0]Y2;
+wire  [15:0]Z2;
 
-wire signed [15:0]RX2;
-wire signed [15:0]RY2;
-wire signed [15:0]RZ2;
+wire  [15:0]RX2;
+wire  [15:0]RY2;
+wire  [15:0]RZ2;
 
-wire signed [15:0]X3;
-wire signed [15:0]Y3;
-wire signed [15:0]Z3;
+wire  [15:0]X3;
+wire  [15:0]Y3;
+wire  [15:0]Z3;
 
-wire signed [15:0]RX3;
-wire signed [15:0]RY3;
-wire signed [15:0]RZ3;
+wire  [15:0]RX3;
+wire [15:0]RY3;
+wire  [15:0]RZ3;
 
-wire signed [15:0]X4;
-wire signed [15:0]Y4;
-wire signed [15:0]Z4;
+wire  [15:0]X4;
+wire  [15:0]Y4;
+wire  [15:0]Z4;
 
-wire signed [15:0]RX4;
-wire signed [15:0]RY4;
-wire signed [15:0]RZ4;
+wire  [15:0]RX4;
+wire  [15:0]RY4;
+wire  [15:0]RZ4;
 
-wire signed [15:0]X5;
-wire signed [15:0]Y5;
-wire signed [15:0]Z5;
+wire  [15:0]X5;
+wire  [15:0]Y5;
+wire  [15:0]Z5;
 
-wire signed [15:0]RX5;
-wire signed [15:0]RY5;
-wire signed [15:0]RZ5;
+wire  [15:0]RX5;
+wire  [15:0]RY5;
+wire  [15:0]RZ5;
 
-wire signed [15:0]X6;
-wire signed [15:0]Y6;
-wire signed [15:0]Z6;
+wire  [15:0]X6;
+wire  [15:0]Y6;
+wire  [15:0]Z6;
 
-wire signed [15:0]RX6;
-wire signed [15:0]RY6;
-wire signed [15:0]RZ6;
+wire  [15:0]RX6;
+wire  [15:0]RY6;
+wire  [15:0]RZ6;
 
-wire signed [15:0]X7;
-wire signed [15:0]Y7;
-wire signed [15:0]Z7;
+wire  [15:0]X7;
+wire  [15:0]Y7;
+wire  [15:0]Z7;
 
-wire signed [15:0]RX7;
-wire signed [15:0]RY7;
-wire signed [15:0]RZ7;
+wire  [15:0]RX7;
+wire  [15:0]RY7;
+wire  [15:0]RZ7;
 
-wire signed [15:0]X8;
-wire signed [15:0]Y8;
-wire signed [15:0]Z8;
+wire  [15:0]X8;
+wire  [15:0]Y8;
+wire  [15:0]Z8;
 
-wire signed [15:0]RX8;
-wire signed [15:0]RY8;
-wire signed [15:0]RZ8;
+wire  [15:0]RX8;
+wire  [15:0]RY8;
+wire  [15:0]RZ8;
 
-wire signed [15:0]X9;
-wire signed [15:0]Y9;
-wire signed [15:0]Z9;
+wire  [15:0]X9;
+wire  [15:0]Y9;
+wire [15:0]Z9;
 
-wire signed [15:0]RX9;
-wire signed [15:0]RY9;
-wire signed [15:0]RZ9;
+wire  [15:0]RX9;
+wire  [15:0]RY9;
+wire  [15:0]RZ9;
 
-wire signed [15:0]X10;
-wire signed [15:0]Y10;
-wire signed [15:0]Z10;
+wire  [15:0]X10;
+wire  [15:0]Y10;
+wire  [15:0]Z10;
 
-wire signed [15:0]RX10;
-wire signed [15:0]RY10;
-wire signed [15:0]RZ10;
+wire  [15:0]RX10;
+wire  [15:0]RY10;
+wire  [15:0]RZ10;
 
-wire signed [15:0]X11;
-wire signed [15:0]Y11;
-wire signed [15:0]Z11;
+wire  [15:0]X11;
+wire  [15:0]Y11;
+wire  [15:0]Z11;
 
-wire signed [15:0]RX11;
-wire signed [15:0]RY11;
-wire signed [15:0]RZ11;
+wire  [15:0]RX11;
+wire  [15:0]RY11;
+wire  [15:0]RZ11;
 
-wire signed [15:0]X12;
-wire signed [15:0]Y12;
-wire signed [15:0]Z12;
+wire  [15:0]X12;
+wire [15:0]Y12;
+wire  [15:0]Z12;
 
-wire signed [15:0]RX12;
-wire signed [15:0]RY12;
-wire signed [15:0]RZ12;
+wire  [15:0]RX12;
+wire  [15:0]RY12;
+wire  [15:0]RZ12;
 
-wire signed [15:0]X13;
-wire signed [15:0]Y13;
-wire signed [15:0]Z13;
+wire  [15:0]X13;
+wire  [15:0]Y13;
+wire  [15:0]Z13;
 
-wire signed [15:0]RX13;
+wire  [15:0]RX13;
 wire signed [15:0]RY13;
 wire signed [15:0]RZ13;
 
