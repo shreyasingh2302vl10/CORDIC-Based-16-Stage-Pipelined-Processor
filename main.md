@@ -132,36 +132,36 @@ wire  [15:0]Y13;
 wire  [15:0]Z13;
 
 wire  [15:0]RX13;
-wire signed [15:0]RY13;
-wire signed [15:0]RZ13;
+wire  [15:0]RY13;
+wire  [15:0]RZ13;
 
-wire signed [15:0]X14;
-wire signed [15:0]Y14;
-wire signed [15:0]Z14;
+wire  [15:0]X14;
+wire  [15:0]Y14;
+wire  [15:0]Z14;
 
-wire signed [15:0]RX14;
-wire signed [15:0]RY14;
-wire signed [15:0]RZ14;
+wire  [15:0]RX14;
+wire  [15:0]RY14;
+wire  [15:0]RZ14;
 
-wire signed [15:0]X15;
-wire signed [15:0]Y15;
-wire signed [15:0]Z15;
+wire  [15:0]X15;
+wire  [15:0]Y15;
+wire  [15:0]Z15;
 
-wire signed [15:0]RX15;
-wire signed [15:0]RY15;
-wire signed [15:0]RZ15;
+wire  [15:0]RX15;
+wire  [15:0]RY15;
+wire  [15:0]RZ15;
 
-wire signed [15:0]X16;
-wire signed [15:0]Y16;
-wire signed [15:0]Z16;
+wire  [15:0]X16;
+wire  [15:0]Y16;
+wire  [15:0]Z16;
 
-wire signed [15:0]RX16;
-wire signed [15:0]RY16;
-wire signed [15:0]RZ16;
+wire  [15:0]RX16;
+wire  [15:0]RY16;
+wire  [15:0]RZ16;
 
-wire signed [15:0]RX17;
-wire signed [15:0]RY17;
-wire signed [15:0]RZ17;
+wire  [15:0]RX17;
+wire  [15:0]RY17;
+wire  [15:0]RZ17;
 
 //wire signed [15:0] atan_table [0:15];
 //assign atan_table[0]  = 16'b0010000000000000; // 8192  = atan(1)
